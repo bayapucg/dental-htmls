@@ -256,20 +256,9 @@
                              <?php foreach($services_details as $list){?>
                             <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                                 <div class="single-services-box">
-                                    <h3><i class="flaticon-tooth-1 color-043d72"></i> <?php echo isset($list['services_name'])?$list['services_name']:'' ?></h3>
+                                    <h3><i class="flaticon-tooth-2"></i> <?php echo isset($list['services_name'])?$list['services_name']:'' ?></h3>
                                     <br>
-									<p> <?php echo substr (isset($list['text'])?$list['text']:'', 0, 100) ?></p>
-                                    <a href="<?php echo base_url('services/name/'.base64_encode($list['s_id'])); ?>" class="read-more-btn">Read More <i class="flaticon-next"></i></a>
-                                </div>
-                            </div>
-							 <?php }?>
-                             <?php }?><?php if(isset($services_details)&& count($services_details)>0){?>
-                             <?php foreach($services_details as $list){?>
-                            <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                                <div class="single-services-box">
-                                    <h3><i class="flaticon-tooth-1 color-043d72"></i> <?php echo isset($list['services_name'])?$list['services_name']:'' ?></h3>
-                                    <br>
-									<p> <?php echo substr (isset($list['text'])?$list['text']:'', 0, 100) ?></p>
+									<p> <?php echo substr (isset($list['text'])?$list['text']:'', 0, 130) ?></p>
                                     <a href="<?php echo base_url('services/name/'.base64_encode($list['s_id'])); ?>" class="read-more-btn">Read More <i class="flaticon-next"></i></a>
                                 </div>
                             </div>
