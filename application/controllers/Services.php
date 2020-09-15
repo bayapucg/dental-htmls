@@ -125,7 +125,7 @@ class Services extends CI_Controller {
 	{	
 		if($this->session->userdata('user_details'))
 		{
-			$admindetails=$this->session->userdata('user_details');
+			$userdetails=$this->session->userdata('user_details');
 			$post=$this->input->post();
 			//echo'<pre>';print_r($post);exit;
 					
@@ -134,11 +134,11 @@ class Services extends CI_Controller {
 							'status'=>1,
 							'created_at'=>date('Y-m-d H:i:s'),
 							'updated_at'=>date('Y-m-d H:i:s'),
-							'created_by'=>$userdetails['a_id'] 
+							'created_by'=>$userdetails['a_id'],
 					);
 					//echo'<pre>';print_r($update_data);exit;
 						$update=$this->Services_model->update_services_details($post['s_id'],$update_data);
-						if(count($update)>0){
+						if(($update)>0){
 							$this->session->set_flashdata('success','Services details successfully Updated');
 							redirect('services/lists');
 							
