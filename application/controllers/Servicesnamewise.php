@@ -113,7 +113,7 @@ class Servicesnamewise  extends Back_end {
 				//echo'<pre>';print_r($update_data);exit;
                 $update=$this->Services_model->update_servicesname_details($post['s_n_id'],$update_data);	
 				// echo'<pre>';print_r($update);exit;
-		       if(count($update)>0){
+		       if(($update)>0){
 					$this->session->set_flashdata('success',"servicesname details successfully updated");	
 					redirect('servicesnamewise/lists');	
 					  }else{
