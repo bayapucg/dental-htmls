@@ -1,4 +1,11 @@
-       
+     <style>  
+	 .twentytwenty-container img {
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    display: block;
+}
+     </style>  
 	   <div class="home-slides owl-carousel owl-theme">
             <?php if(isset($banners_list) && count($banners_list)>0){?>
            <?php  foreach($banners_list as $list ){?>
@@ -228,7 +235,7 @@
                         <div class="services-title-content">
                             <span class="sub-title">Services</span>
                             <h2>What We Offer for You to Our Patients to solve Cure</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum rices gravida.</p>
+                         
 
                             <ul class="features-list">
                                 <li><i class="fas fa-check"></i> Scientific Skills For getting a better result</li>
@@ -246,6 +253,17 @@
 
                             
 							<?php if(isset($services_details)&& count($services_details)>0){?>
+                             <?php foreach($services_details as $list){?>
+                            <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                                <div class="single-services-box">
+                                    <h3><i class="flaticon-tooth-1 color-043d72"></i> <?php echo isset($list['services_name'])?$list['services_name']:'' ?></h3>
+                                    <br>
+									<p> <?php echo substr (isset($list['text'])?$list['text']:'', 0, 100) ?></p>
+                                    <a href="<?php echo base_url('services/name/'.base64_encode($list['s_id'])); ?>" class="read-more-btn">Read More <i class="flaticon-next"></i></a>
+                                </div>
+                            </div>
+							 <?php }?>
+                             <?php }?><?php if(isset($services_details)&& count($services_details)>0){?>
                              <?php foreach($services_details as $list){?>
                             <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                                 <div class="single-services-box">
@@ -358,8 +376,8 @@
                     <div class="icon">
                         <i class="flaticon-business-and-finance"></i>
                     </div>
-                    <h2>Emergency Medical Care 24/7</h2>
-                    <p>With access to 24 hour emergency assistance, It’s so important you can continue to help others.</p>
+                    <h2>Emergency Medical Care </h2>
+                    <p>With access  emergency assistance, It’s so important you can continue to help others.</p>
                     <a href="#" class="call-us"><i class="flaticon-phone-call"></i>&nbsp;<?php echo isset($contact_list['mobile_number'])?$contact_list['mobile_number']:''?>&nbsp;,&nbsp;<?php echo isset($contact_list['alert_mobile_number'])?$contact_list['alert_mobile_number']:''?></a>
                 </div>
             </div>
@@ -402,7 +420,7 @@
                         <div class="col-lg-5 col-md-12">
                             <div class="subscribe-content">
                                 <h2>Join Our Newsletter</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                               
                             </div>
                         </div>
         
