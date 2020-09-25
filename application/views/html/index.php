@@ -38,7 +38,7 @@
         <section class="free-consultation-area">
             <div class="container">
                 <div class="free-consultation-content">
-                    <span class="sub-title">Free Consultation</span>
+                    
                     <h2>Get the right Dentist Book your Doctor</h2>
 
 
@@ -365,7 +365,7 @@
                     <div class="icon">
                         <i class="flaticon-business-and-finance"></i>
                     </div>
-                    <h2>Emergency Medical Care </h2>
+                    <h2>Emergency Medical Dental Care </h2>
                     <p>With access  emergency assistance, It’s so important you can continue to help others.</p>
                     <a href="#" class="call-us"><i class="flaticon-phone-call"></i>&nbsp;<?php echo isset($contact_list['mobile_number'])?$contact_list['mobile_number']:''?>&nbsp;,&nbsp;<?php echo isset($contact_list['alert_mobile_number'])?$contact_list['alert_mobile_number']:''?></a>
                 </div>
